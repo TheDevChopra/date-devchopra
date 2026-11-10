@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F0" />
+      <stop offset="100%" stop-color="#F7E4E5" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect x="8" y="8" width="384" height="344" rx="20" fill="url(#bg)" stroke="#24252B" stroke-opacity="0.08" stroke-width="2"/>
+
+  <!-- Decorative Corner Tape -->
+  <rect x="20" y="10" width="70" height="22" rx="4" fill="#F6E7B8" opacity="0.85" transform="rotate(-6 55 21)"/>
+  <rect x="310" y="14" width="70" height="22" rx="4" fill="#E9A8B0" opacity="0.65" transform="rotate(6 345 25)"/>
+
+  <!-- Category Tag -->
+  <g transform="translate(30, 48)">
+    <rect width="90" height="24" rx="12" fill="#24252B" fill-opacity="0.07"/>
+    <text x="45" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#24252B" text-anchor="middle" letter-spacing="1">CANDID</text>
+  </g>
+
+  <!-- Central Icon Graphic -->
+  <g opacity="0.9">
+    
+      <circle cx="200" cy="180" r="50" fill="none" stroke="#E9A8B0" stroke-width="6"/>
+      <circle cx="200" cy="180" r="24" fill="#E9A8B0" opacity="0.3"/>
+      <rect x="140" y="120" width="120" height="90" rx="16" fill="none" stroke="#E9A8B0" stroke-width="6"/>
+      <rect x="170" y="105" width="30" height="15" rx="4" fill="#E9A8B0"/>
+    
+  </g>
+
+  <!-- Title & Details -->
+  <text x="200" y="270" font-family="'Playfair Display', serif" font-size="22" font-weight="700" fill="#24252B" text-anchor="middle">The Sunday Smile</text>
+  <text x="200" y="296" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="500" fill="#765747" text-anchor="middle">Delhi • Rare candid with no silly faces</text>
+
+  <!-- Bottom Badge -->
+  <rect x="80" y="314" width="240" height="22" rx="11" fill="#FFFFFF" fill-opacity="0.9" stroke="#24252B" stroke-opacity="0.06"/>
+  <text x="200" y="329" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#737686" text-anchor="middle">📷 DEV's PHOTO / MEDIA PLACEHOLDER</text>
+</svg>

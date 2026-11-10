@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #FFF8F0;
+  --color-blush: #F7E4E5;
+  --color-rose: #E9A8B0;
+  --color-ink: #24252B;
+  --color-cocoa: #765747;
+  --color-sage: #DDE8D8;
+  --color-powder: #DCE8F4;
+  --color-butter: #F6E7B8;
+  --color-paper: #FFFCF8;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  overflow-x: hidden;
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E9A8B0;
+  border-radius: 9999px;
+  border: 2px solid #FFF8F0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #765747;
+}
+
+/* Selection */
+::selection {
+  background-color: #F7E4E5;
+  color: #24252B;
+}
+
+/* Scrapbook Decorative Helpers */
+.paper-card {
+  background-color: #FFFCF8;
+  border: 1px solid rgba(36, 37, 43, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(118, 87, 71, 0.06), 0 4px 10px -2px rgba(36, 37, 43, 0.03);
+}
+
+.tape-strip {
+  position: absolute;
+  height: 1.5rem;
+  width: 4.5rem;
+  background-color: rgba(246, 231, 184, 0.85);
+  box-shadow: 0 1px 3px rgba(36, 37, 43, 0.1);
+  transform-origin: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.tape-strip-rose {
+  background-color: rgba(233, 168, 176, 0.7);
+}
+
+.tape-strip-sage {
+  background-color: rgba(221, 232, 216, 0.85);
+}
+
+.polaroid-frame {
+  background-color: #FFFFFF;
+  padding: 0.75rem 0.75rem 2.25rem 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px -4px rgba(36, 37, 43, 0.12), 0 2px 6px -1px rgba(36, 37, 43, 0.06);
+  border: 1px solid rgba(36, 37, 43, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid-frame:hover {
+  box-shadow: 0 16px 36px -8px rgba(118, 87, 71, 0.18);
+}
+
+/* Subtle textured background */
+.bg-cream-dots {
+  background-image: radial-gradient(rgba(118, 87, 71, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Flower Petal Animations */
+@keyframes petalFall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(105vh) translateX(var(--drift, 40px)) rotate(var(--rot, 360deg));
+    opacity: 0;
+  }
+}
+
+.falling-petal {
+  position: fixed;
+  top: -50px;
+  pointer-events: none;
+  z-index: 40;
+  animation-name: petalFall;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-iteration-count: infinite;
+}
+
+/* Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .falling-petal {
+    display: none !important;
+  }
+}
