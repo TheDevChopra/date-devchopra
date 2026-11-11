@@ -72,3 +72,4 @@ Content files are separated in `src/content/` and `src/data/` for easy editing:
 2. Import repository in [Vercel](https://vercel.com).
 3. Add custom domain `date.devchopra.life` in Vercel Project Settings > Domains.
 4. Verify DNS records and SSL.
+

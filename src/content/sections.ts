@@ -302,3 +302,4 @@ export const ambitionHighlights = [
     desc: "Long game: building enduring companies that address real consumer needs, while supporting his future partner's independent career."
   }
 ];
+

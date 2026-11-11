@@ -103,3 +103,4 @@ export interface QuizResult {
   coffeeVerdict: string;
   vibeMatch: string;
 }
+

@@ -186,3 +186,4 @@ placeholders.forEach(item => {
   fs.writeFileSync(path.join(__dirname, item.path), svg);
   console.log('Created:', item.path);
 });
+

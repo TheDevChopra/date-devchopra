@@ -64,3 +64,4 @@ export const devProfile: ProfileInfo = {
     emailPlaceholder: "the.chopra.dev@gmail.com"
   }
 };
+

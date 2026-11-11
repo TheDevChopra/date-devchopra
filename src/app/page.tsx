@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen bg-cream selection:bg-rose/40 selection:text-ink">
+    <div className="relative min-h-screen bg-cream selection:bg-rose/40 selection:text-ink w-full overflow-x-hidden flex flex-col">
       {/* Flower Shower Entrance Fullscreen Overlay */}
       <FlowerShower onEnter={handleEnter} isEntered={hasEntered} />
 
@@ -37,7 +37,7 @@ export default function Home() {
       {hasEntered && <Navbar />}
 
       {/* Main Experience Content */}
-      <main className={`transition-opacity duration-700 ${hasEntered ? "opacity-100" : "opacity-0"}`}>
+      <main className={`transition-opacity duration-700 w-full overflow-x-hidden flex flex-col flex-1 ${hasEntered ? "opacity-100" : "opacity-0"}`}>
         {/* Section 1: Meet Dev Hero */}
         <MeetDev />
 
@@ -68,3 +68,4 @@ export default function Home() {
     </div>
   );
 }
+

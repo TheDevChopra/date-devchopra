@@ -121,8 +121,8 @@ body {
 }
 
 .falling-petal {
-  position: fixed;
-  top: -50px;
+  position: absolute;
+  top: -40px;
   pointer-events: none;
   z-index: 40;
   animation-name: petalFall;
@@ -145,3 +145,4 @@ body {
     display: none !important;
   }
 }
+

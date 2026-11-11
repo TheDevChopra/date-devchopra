@@ -94,3 +94,4 @@ export const galleryItems: GalleryMediaItem[] = [
     polaroidNote: "Pure Banter • Delhi"
   }
 ];
+

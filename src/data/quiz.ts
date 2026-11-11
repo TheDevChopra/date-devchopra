@@ -166,3 +166,4 @@ export const quizResults: Record<string, QuizResult> = {
     vibeMatch: "Vibe Match: 97.8% (Zero Awkward Silences Guaranteed)"
   }
 };
+

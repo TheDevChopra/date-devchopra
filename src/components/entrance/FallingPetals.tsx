@@ -14,7 +14,7 @@ interface Petal {
   shapeType: number;
 }
 
-export default function FallingPetals({ count = 28 }: { count?: number }) {
+export default function FallingPetals({ count = 22 }: { count?: number }) {
   const [petals, setPetals] = useState<Petal[]>([]);
   const [reducedMotion, setReducedMotion] = useState(false);
 
@@ -36,11 +36,11 @@ export default function FallingPetals({ count = 28 }: { count?: number }) {
 
     const generated: Petal[] = Array.from({ length: count }, (_, i) => ({
       id: i,
-      left: Math.random() * 100, // percentage across screen
-      size: 16 + Math.random() * 20, // 16px to 36px
-      duration: 5 + Math.random() * 6, // 5s to 11s
-      delay: Math.random() * 5,
-      drift: -40 + Math.random() * 80, // px drift
+      left: Math.random() * 95, // percentage across mobile screen
+      size: 14 + Math.random() * 16, // 14px to 30px (mobile friendly)
+      duration: 4.5 + Math.random() * 5, // 4.5s to 9.5s
+      delay: Math.random() * 4,
+      drift: -25 + Math.random() * 50, // px drift within mobile frame
       rot: 180 + Math.random() * 360,
       color: colors[i % colors.length],
       shapeType: i % 3,
@@ -54,7 +54,7 @@ export default function FallingPetals({ count = 28 }: { count?: number }) {
   }
 
   return (
-    <div className="pointer-events-none fixed inset-0 overflow-hidden z-30" aria-hidden="true">
+    <div className="pointer-events-none absolute inset-0 overflow-hidden z-30" aria-hidden="true">
       {petals.map((petal) => (
         <div
           key={petal.id}
